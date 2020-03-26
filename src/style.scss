@@ -1,0 +1,10 @@
+@import "./components/header/header";
+
+@font-face {
+  font-family: "Sultan";
+  src: local("sultan-nahia"), url(./fonts/sultan-nahia.ttf) format("truetype");
+}
+
+.app {
+  padding: 20px;
+}
