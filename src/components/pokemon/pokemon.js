@@ -44,7 +44,10 @@ export const Pokemon = props => {
               })}
             </div>
             <img className="pokeball-pk" src={pokeball} alt="img" />
-            <img className="img-pk" src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`} alt="" />
+            {
+              <img className="img-pk" src={pokemon.sprites.front_default} alt="" />
+              //<img className="img-pk" src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`} alt="" />
+            }
           </div>
         </div>
       )}

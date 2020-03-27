@@ -5,11 +5,11 @@ import { Pokemon } from "../pokemon/pokemon";
 export const Pokedex = props => {
   const [isLoading, setIsLoading] = useState(true);
   const [apiResponse, setApiResponse] = useState(null);
-  const [offset, setOffSet] = useState(152);
+  const [offset, setOffSet] = useState(1);
 
   const data = async () => {
     try {
-      const { data: results } = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=25`);
+      const { data: results } = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=807`);
       setApiResponse(results);
       setIsLoading(false);
     } catch (error) {
