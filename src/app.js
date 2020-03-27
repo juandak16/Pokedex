@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import Pokemons from "./components/pokemons/pokemons";
+import { Pokemons } from "./components/pokemons/pokemons";
 
 function App() {
   return (
