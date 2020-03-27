@@ -1,10 +1,75 @@
 @import "./components/header/header";
+@import "./components/pokedex/pokedex";
+@import "./components/pokemon/pokemon";
 
 @font-face {
   font-family: "Sultan";
   src: local("sultan-nahia"), url(./fonts/sultan-nahia.ttf) format("truetype");
 }
-
+body {
+  font-family: "Sultan", Arial;
+}
 .app {
   padding: 20px;
+}
+
+.grass {
+  background-color: #49d0b0;
+}
+.fire {
+  background-color: #f96c6d;
+}
+.water {
+  background-color: #76befe;
+}
+.electric {
+  background-color: #ffce4b;
+}
+.ground {
+  background-color: #b1736d;
+}
+.ghost {
+  background-color: #7b528b;
+}
+.normal {
+  background-color: #fadfb2;
+}
+.fighting {
+  background-color: #b1736d;
+}
+.flying {
+  background-color: #5e9ad4;
+}
+.poison {
+  background-color: #7b528b;
+}
+.rock {
+  background-color: #5c493a;
+}
+.bug {
+  background-color: #099c79;
+}
+.steel {
+  background-color: #918e97;
+}
+.psychic {
+  background-color: #eb758f;
+}
+.ice {
+  background-color: #7dd8f7;
+}
+.dragon {
+  background-color: #433692;
+}
+.dark {
+  background-color: #644d3f;
+}
+.fairy {
+  background-color: #eab3e6;
+}
+.unknown {
+  background-color: #afacaf;
+}
+.shadow {
+  background-color: #070640;
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import Pokemons from "./components/pokemons/pokemons";
+import { Pokedex } from "./components/pokedex/pokedex";
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <Footer />
+      <Pokedex />
     </div>
   );
 }

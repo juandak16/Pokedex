@@ -1,0 +1,25 @@
+.pokedex {
+  .pokedex-container {
+    .pokedex-characters {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .pokedex-character {
+        margin: 5px;
+        width: 200px;
+        height: 143px;
+        border-radius: 25px;
+      }
+      .grass {
+        background-color: #49d0b0;
+      }
+      .fire {
+        background-color: #f96c6d;
+      }
+      .water {
+        background-color: #76befe;
+      }
+    }
+  }
+}
