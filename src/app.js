@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Pokemons />
       <Footer />
     </div>
   );
