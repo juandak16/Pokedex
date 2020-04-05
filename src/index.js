@@ -1,5 +1,5 @@
 import "babel-polyfill";
-import "./style.scss";
+import "./baseStyles/index.scss";
 import "./fonts/sultan-nahia.ttf";
 import React from "react";
 import ReactDOM from "react-dom";

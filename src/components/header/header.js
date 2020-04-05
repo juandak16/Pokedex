@@ -1,5 +1,6 @@
 import React from "react";
 import pokeball from "../../img/pokeball.png";
+import './header.scss';
 
 function Header() {
   return (

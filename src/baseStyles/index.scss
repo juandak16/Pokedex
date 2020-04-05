@@ -1,0 +1,15 @@
+@import "./pokemonColors";
+
+@font-face {
+  font-family: "Sultan";
+  src: local("sultan-nahia"), url(../fonts/sultan-nahia.ttf) format("truetype");
+}
+
+body {
+  font-family: "Sultan", Arial;
+}
+
+.app {
+  padding: 20px;
+}
+

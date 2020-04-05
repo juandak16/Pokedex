@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { pokemonList } from '../../apiCalls';
 import { Pokemon } from "../pokemon/pokemon";
+import './pokedex.scss';
 
 export const Pokedex = props => {
   const [isLoading, setIsLoading] = useState(true);
-  const [apiResponse, setApiResponse] = useState(null);
-  const [offset, setOffSet] = useState(1);
+  const [pokemonListData, setPokemonListData] = useState(null);
 
   const data = async () => {
     try {
-      const { data: results } = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=807`);
-      setApiResponse(results);
+      const { data: results } = await axios.get(pokemonList(props.offset, 10));
+      setPokemonListData(results);
       setIsLoading(false);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
+
   useEffect(() => {
     data();
   }, []);
@@ -23,19 +25,21 @@ export const Pokedex = props => {
   return (
     <div className="pokedex">
       <div className="pokedex-container">
-        {isLoading && <span>Is loading</span>}
-        {!isLoading && (
+        {isLoading ?
+          <span>Is loading</span> :
           <div className="pokedex-characters">
-            {apiResponse.results.map((character, i) => {
-              return (
-                <div key={`${character.id}-${character.name}`} className="pokedex-character">
-                  {<Pokemon id={offset + i} />}
-                </div>
-              );
-            })}
+            {pokemonListData.results.map((character, index) => (
+              <div key={`${character.id}-${character.name}`} className="pokedex-character">
+                {<Pokemon id={props.offset + index} />}
+              </div>
+            ))}
           </div>
-        )}
+        }
       </div>
     </div>
   );
+};
+
+Pokedex.defaultProps = {
+  offset: 1,
 };

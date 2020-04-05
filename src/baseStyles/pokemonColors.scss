@@ -1,0 +1,32 @@
+$pokemons-colors: (
+  "grass": #49d0b0,
+  "fire": #f96c6d,
+  "water": #76befe,
+  "electric": #ffce4b,
+  "ground": #b1736d,
+  "ghost": #7b528b,
+  "normal": #fadfb2,
+  "fighting": #842f27,
+  "flying": #5e9ad4,
+  "poison": #7b528b,
+  "rock": #5c493a,
+  "bug": #099c79,
+  "steel": #918e97,
+  "psychic": #eb758f,
+  "ice": #7dd8f7,
+  "dragon": #433692,
+  "dark": #644d3f,
+  "fairy": #eab3e6,
+  "unknown": #afacaf,
+  "shadow": #070640,
+);
+
+@mixin pokemon-background($name, $color) {
+  .background-#{$name} {
+    background-color: $color;
+  }
+}
+
+@each $name, $color in $pokemons-colors {
+  @include pokemon-background($name, $color);
+}
