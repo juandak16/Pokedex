@@ -1,7 +1,7 @@
-.pokemon {
+.Pokemon {
   width: 100%;
 
-  .pk {
+  &-container {
     height: 143px;
     border-radius: 25px;
     display: flex;
@@ -12,57 +12,63 @@
     padding: 0 10px;
     padding-left: 25px;
     overflow: hidden;
-
     box-shadow: 7px 9px 7px 0 rgba(0, 0, 0, 0.25);
-    .head {
-      .content-id {
-        display: flex;
-        justify-content: end;
-        flex-direction: column;
-        align-items: flex-end;
-        .id-pk {
-          margin: 0 10px;
-          font-size: 25px;
-          color: #0000001c;
-          font-weight: 600;
-        }
-      }
-      .name-pk {
-        margin: 0;
-        text-transform: capitalize;
+  }
+
+  &-head {
+    &-id {
+      display: flex;
+      justify-content: end;
+      flex-direction: column;
+      align-items: flex-end;
+
+      p {
+        margin: 0 10px;
         font-size: 25px;
-        font-weight: 500;
-        margin-top: -15px;
+        color: #0000001c;
+        font-weight: 600;
       }
     }
-    .detail-pk {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      position: relative;
-      .content-types {
-        .type {
-          text-transform: capitalize;
-          background-color: #ffffff54;
-          padding: 5px 10px;
-          margin: 5px 0;
-          border-radius: 25px;
-          font-size: 15px;
-          width: min-content;
-        }
+
+    &-name {
+      margin: 0;
+      text-transform: capitalize;
+      font-size: 25px;
+      font-weight: 500;
+      margin-top: -15px;
+    }
+  }
+
+  &-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    &-types {
+      div {
+        text-transform: capitalize;
+        background-color: #ffffff54;
+        padding: 5px 10px;
+        margin: 5px 0;
+        border-radius: 25px;
+        font-size: 15px;
+        width: min-content;
       }
-      .img-pk {
-        width: 80px;
-        height: 80px;
-        z-index: 2;
-      }
-      .pokeball-pk {
-        width: 100px;
-        position: absolute;
-        opacity: 0.4;
-        right: -9px;
-        top: -5px;
-      }
+    }
+
+    &-pokeball {
+      width: 100px;
+      position: absolute;
+      opacity: 0.4;
+      right: -9px;
+      top: -5px;
+    }
+
+    &-image {
+      width: 80px;
+      height: 80px;
+      z-index: 2;
     }
   }
 }

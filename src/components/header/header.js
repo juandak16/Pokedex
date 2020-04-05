@@ -4,10 +4,9 @@ import './header.scss';
 
 function Header() {
   return (
-    <div className="header">
-      <img className="pokeball" src={pokeball} alt="img" />
-      <h1 className="title">Pokedex</h1>
-      <i className="fas fa-sort-amount-up"></i>
+    <div className="Header">
+      <img className="Header-pokeball" src={pokeball} alt="img" />
+      <h1 className="Header-title">Pokedex</h1>
     </div>
   );
 }

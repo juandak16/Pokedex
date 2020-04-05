@@ -25,32 +25,41 @@ export const Pokemon = props => {
 
 
   return (
-    <div className="pokemon">
+    <div className="Pokemon">
       {isLoading ? 
         <span>Is loading</span> :
-        <div className={`pk background-${pokemonData.types[0].type.name}`}>
-          <div className="head">
-            <div className="content-id">
-              <p className="id-pk">#{pokemonData.id}</p>
+        <div
+          className={`
+            Pokemon-container
+            background-${pokemonData.types[pokemonData.types.length - 1].type.name}
+          `}
+        >
+          <div className="Pokemon-head">
+            <div className="Pokemon-head-id">
+              <p>#{pokemonData.id}</p>
             </div>
-            <h2 className="name-pk">{pokemonData.name}</h2>
+            <h2 className="Pokemon-head-name">{pokemonData.name}</h2>
           </div>
-          <div className="detail-pk">
-            <div className="content-types">
+          <div className="Pokemon-detail">
+            <div className="Pokemon-detail-types">
               {pokemonData.types.map(type => (
-                <div key={`${pokemonData.id}-${type.type.name}`} className="type">
+                <div key={`${pokemonData.id}-${type.type.name}`}>
                   {type.type.name}
                 </div>
               ))}
             </div>
-            <img className="pokeball-pk" src={pokeball} alt="pokeball decorativve image" />
+            <img
+              className="Pokemon-detail-pokeball"
+              src={pokeball}
+              alt="pokeball decorativve image"
+            />
             {
               <img 
-                className="img-pk"
+                className="Pokemon-detail-image"
                 src={pokemonData.sprites.front_default}
                 alt={pokemonData.name}
               />
-              //<img className="img-pk" src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`} alt="" />
+              // <img className="Pokemon-detail-image" src={`https://pokeres.bastionbot.org/images/pokemon/${pokemonData.id}.png`} alt={pokemonData.name} />
             }
           </div>
         </div>

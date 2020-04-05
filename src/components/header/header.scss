@@ -1,23 +1,22 @@
-.header {
+.Header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-family: "Sultan", Arial;
   margin-bottom: 20px;
-  .title {
+
+  &-title {
     font-size: 50px;
     font-weight: 500;
     margin: 0;
   }
-  .pokeball {
+
+  &-pokeball {
     width: 274px;
     z-index: -1;
     position: fixed;
     right: -90px;
     top: -75px;
-  }
-  .icon-filter {
-    height: 20px;
   }
 }

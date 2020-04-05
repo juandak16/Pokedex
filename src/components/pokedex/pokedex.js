@@ -10,7 +10,7 @@ export const Pokedex = props => {
 
   const data = async () => {
     try {
-      const { data: results } = await axios.get(pokemonList(props.offset, 10));
+      const { data: results } = await axios.get(pokemonList(props.offset, 15));
       setPokemonListData(results);
       setIsLoading(false);
     } catch (error) {
@@ -23,19 +23,17 @@ export const Pokedex = props => {
   }, []);
 
   return (
-    <div className="pokedex">
-      <div className="pokedex-container">
-        {isLoading ?
-          <span>Is loading</span> :
-          <div className="pokedex-characters">
-            {pokemonListData.results.map((character, index) => (
-              <div key={`${character.id}-${character.name}`} className="pokedex-character">
-                {<Pokemon id={props.offset + index} />}
-              </div>
-            ))}
-          </div>
-        }
-      </div>
+    <div className="Pokedex">
+      {isLoading ?
+        <span>Is loading</span> :
+        <div className="Pokedex-container">
+          {pokemonListData.results.map((character, index) => (
+            <div key={`${character.id}-${character.name}`} className="Pokedex-character">
+              {<Pokemon id={props.offset + index} />}
+            </div>
+          ))}
+        </div>
+      }
     </div>
   );
 };

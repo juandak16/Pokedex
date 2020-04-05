@@ -1,25 +1,17 @@
-.pokedex {
-  .pokedex-container {
-    .pokedex-characters {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      .pokedex-character {
-        margin: 5px;
-        width: 200px;
-        height: 143px;
-        border-radius: 25px;
-      }
-      .grass {
-        background-color: #49d0b0;
-      }
-      .fire {
-        background-color: #f96c6d;
-      }
-      .water {
-        background-color: #76befe;
-      }
-    }
+.Pokedex {
+  width: 100%;
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &-character {
+    width: 200px;
+    height: 143px;
+    border-radius: 25px;
   }
 }
